@@ -37,9 +37,8 @@ public class Personne {
 	protected String telephone;
 	protected String Email;
 	protected String Fonction;
-	@ManyToMany
-	private List<Role> roles;
-	@ManyToMany
+	
+	@ManyToMany 
 	private List <Thematique> thematiques;
 	
 	

@@ -4,19 +4,18 @@ import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 
 @Entity
 public class Beneficiaire extends Personne {
 	
-	@OneToMany
+	@OneToMany(mappedBy = "beneficiaire")
 	private List <Affectation> affectation;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "beneficiaire")
 	private List <Diplome> diplome;
 	
-	@OneToOne
-	private Abscence abscence;
+	@OneToMany(mappedBy = "beneficiaire")
+	private List <Abscence> abscence;
 	
 	@OneToMany
 	private List <ForContinue> forContinue;

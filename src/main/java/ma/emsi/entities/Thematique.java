@@ -39,7 +39,7 @@ public class Thematique {
 	private Date DateDebut;
 	private Date DateFin;
 	
-	@ManyToMany
+	@ManyToMany(mappedBy = "thematiques")
 	private List <Personne> personnes;
 
 }
